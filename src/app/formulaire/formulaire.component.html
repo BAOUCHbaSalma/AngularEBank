@@ -1,0 +1,22 @@
+<form [formGroup]="userForm" (ngSubmit)="hundelSubmit()">
+    <label for="username">username:</label>
+    <input id="username" formControlName="username" type="text">
+  
+    <label for="password">password:</label>
+    <input id="password" formControlName="password" type="text">
+  
+    <label for="age">age:</label>
+    <input id="age" formControlName="age" type="number">
+  
+    <label for="genre">genre:</label>
+    <input id="genre" formControlName="genre" type="text">
+
+    <label for="typeCarte">typeCarte:</label>
+    <input id="typeCarte" formControlName="typeCarte" type="text">
+
+    <label for="typeCompte">typeCompte:</label>
+    <input id="typeCompte" formControlName="typeCompte" type="text">
+  
+    <button  type="submit">Submit</button>
+  </form>
+  

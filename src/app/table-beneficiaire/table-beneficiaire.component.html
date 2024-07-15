@@ -1,0 +1,26 @@
+<table>
+    <thead>
+    <tr>
+      <th>idBeneficiaire</th>
+      <th>nomBeneficiaire</th>
+      <th>banque</th>
+      <th>numeroCompte</th>
+      <th>id compte</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let beneficiaire of listBeneficiaire">
+      <td>{{beneficiaire.idBeneficiaire}}</td>
+      <td>{{beneficiaire.nomBeneficiaire}}</td>
+      <td>{{beneficiaire.banque}}</td>
+      <td>{{beneficiaire.numeroCompte}}</td>
+      <td>{{beneficiaire.compte.idCompte}}</td>
+      
+  
+    </tr>
+
+    </tbody>
+  </table>
+
+
+
