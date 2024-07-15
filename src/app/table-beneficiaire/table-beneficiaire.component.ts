@@ -22,6 +22,11 @@ export class TableBenefciaireComponent implements OnInit{
     })
    
   }
+  deleteBeneficiaire(id:number){
+    this.srv.deleteBenificiaire(id).subscribe(()=>{
+      this.ngOnInit();
+    })
+  }
   
 
 }
