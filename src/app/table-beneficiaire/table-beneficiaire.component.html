@@ -15,9 +15,12 @@
       <td>{{beneficiaire.banque}}</td>
       <td>{{beneficiaire.numeroCompte}}</td>
       <td>{{beneficiaire.compte.idCompte}}</td>
-      <td><button type="button" class="btn btn-delete" (click)="deleteBeneficiaire(beneficiaire.idBeneficiaire)">Delete</button></td>
+
+      <td>
+        <a routerLink="/beneficiaire/{{beneficiaire.idBeneficiaire}}">Update</a>
+        <button type="button" class="btn btn-delete" (click)="deleteBeneficiaire(beneficiaire.idBeneficiaire)">Delete</button>
+    </td>
       
-  
     </tr>
 
     </tbody>

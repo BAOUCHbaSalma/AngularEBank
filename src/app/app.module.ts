@@ -8,13 +8,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './table/table.component';
 import { TableBenefciaireComponent } from './table-beneficiaire/table-beneficiaire.component';
+import { UpdatebeneficiaireComponent } from './updatebeneficiaire/updatebeneficiaire.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormulaireComponent,
     TableComponent,
-    TableBenefciaireComponent
+    TableBenefciaireComponent,
+    UpdatebeneficiaireComponent
   ],
   imports: [
     BrowserModule,

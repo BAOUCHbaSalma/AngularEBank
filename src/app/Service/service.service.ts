@@ -12,8 +12,8 @@ export class ServiceService {
 
   constructor(private http : HttpClient) { }
 
-  public addUser(FormData:any):Observable<CompteRequest>{
-    return this.http.post<CompteRequest>("http://localhost:8080/user",FormData)
+  public addUser(FormData:any){
+    return this.http.post("http://localhost:8080/user",FormData)
   }
   public tableUser(id:number):Observable<Array<Compte>>{
     return this.http.get<Array<Compte>>(`${this.urlApi}/comptes/${id}`)
@@ -23,5 +23,16 @@ export class ServiceService {
   }
   public tableBenificiaire(id:number):Observable<Array<Beneficiaire>>{
     return this.http.get<Array<Beneficiaire>>(`${this.urlApi}/beneficiaires/${id}`)
+  }
+  public finfBeneficiaire(id:number):Observable<Beneficiaire>{
+    return this.http.get<Beneficiaire>(`${this.urlApi}/findB/${id}`)
+  }
+  public updateBeneficiaire(id:number,inputData:Beneficiaire){
+    return this.http.put(`${this.urlApi}/beneficiaire/${id}`,inputData)
+
+  }
+  public addBeneficiaire(FormData:Beneficiaire){
+    return this.http.put(`${this.urlApi}/beneficiaire/${id}`,inputData)
+
   }
 }

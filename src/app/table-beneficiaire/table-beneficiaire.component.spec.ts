@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TableBeneficiaireComponent } from './table-beneficiaire.component';
+import { TableBenefciaireComponent } from './table-beneficiaire.component';
 
 describe('TableBeneficiaireComponent', () => {
-  let component: TableBeneficiaireComponent;
-  let fixture: ComponentFixture<TableBeneficiaireComponent>;
+  let component: TableBenefciaireComponent;
+  let fixture: ComponentFixture<TableBenefciaireComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TableBeneficiaireComponent]
+      declarations: [TableBenefciaireComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(TableBeneficiaireComponent);
+    fixture = TestBed.createComponent(TableBenefciaireComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
