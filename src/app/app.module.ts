@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './table/table.component';
 import { TableBenefciaireComponent } from './table-beneficiaire/table-beneficiaire.component';
 import { UpdatebeneficiaireComponent } from './updatebeneficiaire/updatebeneficiaire.component';
+import { AddBeneficiaireComponent } from './add-beneficiaire/add-beneficiaire.component';
+import { CarteBancaireComponent } from './carte-bancaire/carte-bancaire.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { UpdatebeneficiaireComponent } from './updatebeneficiaire/updatebenefici
     FormulaireComponent,
     TableComponent,
     TableBenefciaireComponent,
-    UpdatebeneficiaireComponent
+    UpdatebeneficiaireComponent,
+    AddBeneficiaireComponent,
+    CarteBancaireComponent
   ],
   imports: [
     BrowserModule,

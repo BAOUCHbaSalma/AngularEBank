@@ -32,7 +32,11 @@ export class ServiceService {
 
   }
   public addBeneficiaire(FormData:Beneficiaire){
-    return this.http.put(`${this.urlApi}/beneficiaire/${id}`,inputData)
+    return this.http.post(`${this.urlApi}/beneficiaire`,FormData)
+
+  }
+  public showCartesBancaires(id:number){
+    return this.http.get(`${this.urlApi}/cartes/${id}`)
 
   }
 }

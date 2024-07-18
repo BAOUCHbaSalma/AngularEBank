@@ -34,3 +34,14 @@ export interface Beneficiaire{
    compte:Compte 
 
 }
+
+export interface CarteBancaire{
+
+     idCarte:number
+     numero:number   
+     dateExpiration:string
+     typeCarte:string
+     status:string
+     compte:Compte
+
+}

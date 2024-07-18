@@ -1,0 +1,29 @@
+
+<table>
+    <thead>
+    <tr>
+      <th>idCarte</th>
+      <th>numero</th>
+      <th>dateExpiration</th>
+      <th>typeCarte</th>
+      <th>status</th>
+      <th>compte</th>
+    
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let carte of listCartes">
+      <td>{{carte.idCarte}}</td>
+      <td>{{carte.numero}}</td>
+      <td>{{carte.dateExpiration}}</td>
+      <td>{{carte.typeCarte}}</td>
+      <td>{{carte.status}}</td>
+      <td>{{carte.compte.idCompte}}</td>
+    
+    </tr>
+
+    </tbody>
+  </table>
+
+
+
