@@ -11,6 +11,7 @@ import { TableBenefciaireComponent } from './table-beneficiaire/table-beneficiai
 import { UpdatebeneficiaireComponent } from './updatebeneficiaire/updatebeneficiaire.component';
 import { AddBeneficiaireComponent } from './add-beneficiaire/add-beneficiaire.component';
 import { CarteBancaireComponent } from './carte-bancaire/carte-bancaire.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CarteBancaireComponent } from './carte-bancaire/carte-bancaire.componen
     TableBenefciaireComponent,
     UpdatebeneficiaireComponent,
     AddBeneficiaireComponent,
-    CarteBancaireComponent
+    CarteBancaireComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

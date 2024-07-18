@@ -51,4 +51,8 @@ export class ServiceService {
   public changerStatusCarte(status:string,idCarte:number){
     return this.http.post(`${this.urlApi}/carte/${idCarte}/status`,status)
   }
+
+  public Login(FormData:User){
+    return this.http.post(`${this.urlApi}/login`,FormData)
+  }
 }

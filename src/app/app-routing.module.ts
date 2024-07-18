@@ -6,6 +6,7 @@ import { TableBenefciaireComponent } from './table-beneficiaire/table-beneficiai
 import { UpdatebeneficiaireComponent } from './updatebeneficiaire/updatebeneficiaire.component';
 import { AddBeneficiaireComponent } from './add-beneficiaire/add-beneficiaire.component';
 import { CarteBancaireComponent } from './carte-bancaire/carte-bancaire.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:"home",component:FormulaireComponent},
@@ -14,7 +15,7 @@ const routes: Routes = [
   {path:"beneficiaire/:idB",component:UpdatebeneficiaireComponent},
   {path:"beneficiaire",component:AddBeneficiaireComponent},
   {path:"cartes/:idC",component:CarteBancaireComponent},
- 
+  {path:"login",component:LoginComponent},
 
 ];
 
