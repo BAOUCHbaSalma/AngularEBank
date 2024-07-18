@@ -19,7 +19,11 @@
       <td>{{carte.typeCarte}}</td>
       <td>{{carte.status}}</td>
       <td>{{carte.compte.idCompte}}</td>
-    
+   <td>
+    <button type="button" (click)="updateStatus(carte.idCarte, 'active')">Activer</button>
+    <button type="button" (click)="updateStatus(carte.idCarte, 'inactive')">Désactiver</button>
+    <button type="button" (click)="updateStatus(carte.idCarte, 'blocked')">Bloquer</button>
+   </td>
     </tr>
 
     </tbody>

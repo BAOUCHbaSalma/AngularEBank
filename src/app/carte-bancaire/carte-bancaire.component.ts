@@ -19,5 +19,11 @@ export class CarteBancaireComponent implements OnInit{
     })
 
   }
+  updateStatus(idCarte:number,status:string){
+    this.srv.changerStatusCarte(status,idCarte).subscribe(()=>{
+      this.ngOnInit()
+    })
+    
+  }
 
 }
