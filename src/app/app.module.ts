@@ -5,13 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './table/table.component';
 import { TableBenefciaireComponent } from './table-beneficiaire/table-beneficiaire.component';
 import { UpdatebeneficiaireComponent } from './updatebeneficiaire/updatebeneficiaire.component';
 import { AddBeneficiaireComponent } from './add-beneficiaire/add-beneficiaire.component';
 import { CarteBancaireComponent } from './carte-bancaire/carte-bancaire.component';
 import { LoginComponent } from './login/login.component';
+import { AuthInterceptor } from './Service/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

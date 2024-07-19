@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../Service/service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { User } from '../Model/Model.models';
 
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 FormLogin!:FormGroup
   
 
-  constructor(private srv:ServiceService,private route:ActivatedRoute,private fb:FormBuilder){}
+  constructor(private srv:ServiceService,private route:Router,private fb:FormBuilder){}
 
   ngOnInit(): void {
     this.FormLogin=this.fb.group({
@@ -37,6 +37,8 @@ hundelSubmit(){
     if(res && res.token){
       console.log("login successs")
       localStorage.setItem("jwt",res.token)
+      this.route.navigateByUrl('/home');
+
     }
   })
 }

@@ -55,4 +55,7 @@ export class ServiceService {
   public Login(FormData:User){
     return this.http.post(`${this.urlApi}/login`,FormData)
   }
+  getToken(): string | null {
+    return localStorage.getItem('jwt');
+  }
 }
