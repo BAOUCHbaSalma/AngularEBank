@@ -3,6 +3,7 @@ import { ServiceService } from '../Service/service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { User } from '../Model/Model.models';
+import { TokenService } from '../Service/token-decode.service';
 
 @Component({
   selector: 'app-login',
@@ -11,9 +12,10 @@ import { User } from '../Model/Model.models';
 })
 export class LoginComponent implements OnInit {
 FormLogin!:FormGroup
+id!:any
   
 
-  constructor(private srv:ServiceService,private route:Router,private fb:FormBuilder){}
+  constructor(private srv:ServiceService,private route:Router,private fb:FormBuilder,private srvtoken:TokenService){}
 
   ngOnInit(): void {
     this.FormLogin=this.fb.group({
@@ -37,9 +39,12 @@ hundelSubmit(){
     if(res && res.token){
       console.log("login successs")
       localStorage.setItem("jwt",res.token)
-      this.route.navigateByUrl('/home');
-
-    }
+      this.srvtoken.getIdByUsername(res.token).subscribe(
+        id => {
+            this.route.navigateByUrl(`/home/${id}`);
+          })
+        }
+    
   })
 }
 }

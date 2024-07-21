@@ -22,7 +22,9 @@
         <td>{{compte.numeroCompte}}</td>
         <td>{{compte.raisonFermeture}}</td>
         <td>{{compte.user.userId}}</td>
-        <td> <a routerLink="/cartes/{{compte.idCompte}}">Show Cartes</a></td>
+        <td> 
+          <button type="button" (click)="updateStatus(compte.idCompte, 'Fermer')">Fermer</button>
+          <a routerLink="/cartes/{{compte.idCompte}}">Show Cartes</a></td>
     
       </tr>
 

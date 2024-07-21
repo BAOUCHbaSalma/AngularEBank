@@ -1,3 +1,5 @@
+
+
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
 import { Observable } from "rxjs";
 
@@ -8,6 +10,7 @@ export class AuthInterceptor implements HttpInterceptor {
           let token = null;
           if (typeof localStorage !== 'undefined') {
             token = localStorage.getItem('jwt');
+            
           }
 
           
@@ -22,3 +25,4 @@ export class AuthInterceptor implements HttpInterceptor {
     }
        return next.handle(req);
 }}
+ 

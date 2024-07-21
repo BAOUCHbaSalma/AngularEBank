@@ -7,15 +7,16 @@ import { UpdatebeneficiaireComponent } from './updatebeneficiaire/updatebenefici
 import { AddBeneficiaireComponent } from './add-beneficiaire/add-beneficiaire.component';
 import { CarteBancaireComponent } from './carte-bancaire/carte-bancaire.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path:"home",component:FormulaireComponent},
-  {path:"home/:id",component:TableComponent},
-  {path:"beneficiaires/:idB",component:TableBenefciaireComponent},
-  {path:"beneficiaire/:idB",component:UpdatebeneficiaireComponent},
-  {path:"beneficiaire",component:AddBeneficiaireComponent},
-  {path:"cartes/:idC",component:CarteBancaireComponent},
-  {path:"login",component:LoginComponent},
+  {path:"",component:HomeComponent},
+   {path:"home/:id",component:TableComponent},
+  // {path:"beneficiaires/:idB",component:TableBenefciaireComponent},
+  // {path:"beneficiaire/:idB",component:UpdatebeneficiaireComponent},
+  // {path:"beneficiaire",component:AddBeneficiaireComponent},
+   {path:"cartes/:idC",component:CarteBancaireComponent},
+ // {path:"login",component:LoginComponent},
 
 ];
 @NgModule({

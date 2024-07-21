@@ -1,10 +1,10 @@
 <form [formGroup]="FormLogin" (ngSubmit)="hundelSubmit()">
-
-    <label for="username">username:</label>
-    <input id="username" formControlName="username" type="text">
+    <h1>Login</h1>
+    <label for="username">username:</label><br>
+    <input id="username" formControlName="username" type="text" placeholder="username"><br>
   
-    <label for="password">password:</label>
-    <input id="password" formControlName="password" type="text">
+    <label for="password">password:</label><br>
+    <input id="password" formControlName="password" type="text" placeholder="password"><br>
 
     <button  type="submit">Submit</button>
 

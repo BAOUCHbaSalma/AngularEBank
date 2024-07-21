@@ -1,0 +1,45 @@
+.wrapper{
+    border-radius: 15ppx;
+    color: white;
+    padding: 20px;
+}
+form{
+    background: var(--background-primary);
+    padding: 30px;
+    width: 400px;
+    border-radius: 12px;
+}
+label{
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: left;
+}
+form > input{
+    padding: 15px 10px;
+    border: none;
+    outline-color: var(--background-primary);
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+}
+form > h1 {
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+}
+form > button{
+    color: white;
+    padding: 10px 14px;
+    border: 2px solid white;
+    border-radius: 12px;
+    transition: .4s;
+    cursor: pointer;
+    background: transparent;
+    margin-top: 8px;
+    font-weight: 800;
+}
+form > button:hover{
+    color: black;
+    background: white;
+}

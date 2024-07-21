@@ -58,4 +58,12 @@ export class ServiceService {
   getToken(): string | null {
     return localStorage.getItem('jwt');
   }
+  public changeStatusCompte(idCompte:number,status:string){
+    return this.http.put(`${this.urlApi}/compte/${idCompte}/status`,status)
+
+  }
+  public findIdByUsername(username:String){
+    return this.http.get(`${this.urlApi}/user/id?username=${username}`)
+  }
+
 }

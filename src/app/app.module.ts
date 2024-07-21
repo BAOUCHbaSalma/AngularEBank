@@ -4,7 +4,6 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './table/table.component';
 import { TableBenefciaireComponent } from './table-beneficiaire/table-beneficiaire.component';
@@ -13,6 +12,10 @@ import { AddBeneficiaireComponent } from './add-beneficiaire/add-beneficiaire.co
 import { CarteBancaireComponent } from './carte-bancaire/carte-bancaire.component';
 import { LoginComponent } from './login/login.component';
 import { AuthInterceptor } from './Service/auth-interceptor.service';
+import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -23,18 +26,20 @@ import { AuthInterceptor } from './Service/auth-interceptor.service';
     UpdatebeneficiaireComponent,
     AddBeneficiaireComponent,
     CarteBancaireComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(),
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+   { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })
