@@ -14,6 +14,10 @@ import { LoginComponent } from './login/login.component';
 import { AuthInterceptor } from './Service/auth-interceptor.service';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ShowAccountComponent } from './show-account/show-account.component';
+import { TransactionComponent } from './transaction/transaction.component';
+
 
 
 
@@ -27,7 +31,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AddBeneficiaireComponent,
     CarteBancaireComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent,
+    ShowAccountComponent,
+    TransactionComponent,
+    
   ],
   imports: [
     BrowserModule,

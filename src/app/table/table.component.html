@@ -1,4 +1,4 @@
-
+<!-- 
     <table>
       <thead>
       <tr>
@@ -32,4 +32,25 @@
     </table>
 
 
-
+ -->
+ <div class="home">
+  <div class="header container">
+      <div class="img">
+        <img src="../../assets/images/Grey and Orange Credit Card Security Finance Logo.png" alt="">
+      </div>
+  </div>
+  <div class="content">
+    <h1>CHOOSE YOU <span> ACCOUNT </span> FROM HERE !</h1>
+  </div>
+  <div class="accounts">
+    <div class="cardAccount" *ngFor="let compte of listComptes">
+        <div class="iconA">
+          <img src="../../assets/images/safe-box.png" alt="">
+        </div>
+        <div class="info">
+          <h1>{{compte.numeroCompte}}</h1>
+          <a href="/dashboard/{{compte.idCompte}}">View</a>
+        </div>
+    </div>
+  </div>
+ </div>

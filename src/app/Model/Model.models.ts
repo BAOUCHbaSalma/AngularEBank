@@ -38,7 +38,7 @@ export interface Beneficiaire{
 export interface CarteBancaire{
 
      idCarte:number
-     numero:number   
+     numero:any   
      dateExpiration:string
      typeCarte:string
      status:string

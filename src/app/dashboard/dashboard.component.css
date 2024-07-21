@@ -1,0 +1,123 @@
+.dashboard{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+.menu{
+    width: 20%;
+    height: 100%;
+    background: var(--color-secondary);
+}
+.hero{
+    width: 78%;
+    height: 100%
+}
+.nav{
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile{
+   width: 30%;
+   display: flex;
+   align-items: center;
+}
+.imgProfile{
+    width: 50px;
+    height: 50px;
+    background: grey;
+    border-radius: 100%;
+}
+.profile > h2{
+    font-size: 17px;
+    color: white;
+    font-weight: 700;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+.btns{
+    width: 30%;
+}
+.btns > button{
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 15px;
+    background: var(--color-secondary);
+    color: white;
+}
+.hero-main{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+.hero-main-left{
+    width: 60%;
+    height: 100%;
+}
+.hero-main-right{
+    width: 38%;
+    height: 100%;
+}
+.account{
+    width: 100%;
+    padding: 20px;
+    background: var(--color-secondary);
+    border-radius: 15px;
+}
+.header-account{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.header-account > h1 {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--color-light);
+}
+.transaction{
+    width: 100%;
+    padding: 20px;
+    background: var(--color-secondary);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.transaction-header{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 10px;
+}
+.transaction-header > h1 {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+.transaction-header > button{
+    background: var(--background-primary);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 10px;
+    color: var(--color-light);
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+.transaction-header > button:hover{
+    background:black;
+}
+.cardB{
+    width: 100%;
+    padding: 20px;
+    background: var(--color-secondary);
+    border-radius: 15px;
+    margin-top: 10px;
+}

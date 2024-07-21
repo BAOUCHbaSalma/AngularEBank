@@ -1,5 +1,5 @@
 
-<table>
+<!-- <table>
     <thead>
     <tr>
       <th>idCarte</th>
@@ -27,7 +27,27 @@
     </tr>
 
     </tbody>
-  </table>
+  </table> -->
 
 
 
+  <div class="container" *ngFor="let carte of listCartes">
+    <header>
+      <span class="logo">
+        <img src="../../assets/images/logoo.png" alt="Logo" />
+        <h5>Master Card</h5>
+      </span>
+      <img src="../../assets/images/chip.png" alt="Chip" class="chip" />
+    </header>
+    <div class="card-details">
+      <div class="name-number">
+        <h6>Card Number</h6>
+        <h5 class="number">{{ getFormattedCardNumber(carte) }}</h5>
+        <h5 class="name">{{ carte.typeCarte }}</h5>
+      </div>
+      <div class="valid-date">
+        <h6>Valid Thru</h6>
+        <h5>{{ getFormattedExpirationDate(carte) }}</h5>
+      </div>
+    </div>
+  </div>

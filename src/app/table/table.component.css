@@ -1,0 +1,76 @@
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/images/dollars.png");
+    background-size: cover;
+}
+.header{
+    width: 100%;
+}
+.img{
+    width: 200px;
+}
+.img > img {
+    width: 100%;
+}
+.content{
+    width: 400px;
+    margin: 10px auto;
+}
+.content > h1{
+    font-weight: 900;
+    color: white;
+    padding: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.347);
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.562);
+}
+span{
+    color: #FFC801;
+}
+.accounts{
+    width: 40%;
+    max-height: 400px;
+    margin: 30px auto;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.411);
+    backdrop-filter: blur(8px);
+}
+.cardAccount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: var(--color-secondary);
+    margin: 10px;
+    border-radius: 7px;
+}
+
+.cardAccount > .iconA{
+    width: 30px;
+}
+.info{
+    display: flex;
+    align-items: center;
+    width: 68%;
+    justify-content: space-between;
+}
+.info > h1{
+    color: white;
+    font-size: 25px;
+    padding-top: 8px;
+    letter-spacing: 2px;
+}
+.info > a {
+    text-decoration: none;
+    color: white;
+    padding: 10px ;
+    border-radius: 12px;
+    background: #535252;
+    transition: .4s;
+    font-weight: 700;
+}
+.info > a:hover {
+    background: #3f3f3f;
+
+}

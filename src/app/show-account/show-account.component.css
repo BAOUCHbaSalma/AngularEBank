@@ -1,0 +1,29 @@
+.account{
+    margin: 10px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+.info{
+    padding: 0 20px;
+}
+.info > p{
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info > p > span{
+    text-align: left;
+    justify-content: start;
+}
+.active {
+    color: green;
+  }
+  
+.desactive {
+    color: red;
+  }
