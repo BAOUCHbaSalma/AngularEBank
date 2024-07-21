@@ -66,4 +66,9 @@ export class ServiceService {
     return this.http.get(`${this.urlApi}/user/id?username=${username}`)
   }
 
+  public showAllTransactionByIdCompte(idCompte:string){
+    return this.http.get(`${this.urlApi}/transactions/${idCompte}`)
+
+  }
+
 }

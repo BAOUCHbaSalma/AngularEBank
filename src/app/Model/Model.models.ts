@@ -45,3 +45,17 @@ export interface CarteBancaire{
      compte:Compte
 
 }
+
+export interface Transaction{
+    idTransaction:number
+    dateTransaction:string
+    heursTransaction:String
+    montant:number
+    typeTransaction:string
+    descriptionTransaction:string
+    banque:string
+    beneficiaire:Beneficiaire
+    compte:Compte
+    
+
+}

@@ -1,100 +1,33 @@
 <div class="transaction-container"> 
     <div class="transaction-wrapper">
-      <div class="transaction">
+      
+      <div class="transaction" *ngFor="let transaction of listTransaction">
         <div class="transaction-info">
           <div class="transaction-icon">
             <img src="../../assets/icons/transaction (2).png" alt="">
           </div>
           <div class="transaction-details">
-            <h2>Payement For Service</h2>
-            <p>2024-03-23, 16:20</p>
+            <h2>{{transaction.descriptionTransaction}}</h2>
+            <p>Date : {{transaction.dateTransaction}} , Heurs : {{transaction.heursTransaction}}</p>
           </div>
         </div>
         <div class="transaction-type">
-          <p>Credit</p>
-          <p class="transaction-category">CIH</p>
+          <p>{{transaction.typeTransaction}}</p>
+          <p class="transaction-category">{{transaction.banque}}</p>
         </div>
         <div class="transaction-amount">
-          <p>236 $</p>
+          <p>{{transaction.montant}}DH</p>
           <p class="transaction-status">Success</p>
         </div>
       </div>
-      <div class="transaction">
-        <div class="transaction-info">
-          <div class="transaction-icon">
-            <img src="../../assets/icons/transaction (2).png" alt="">
-          </div>
-          <div class="transaction-details">
-            <h2>Payement For Service</h2>
-            <p>2024-03-23, 16:20</p>
-          </div>
-        </div>
-        <div class="transaction-type">
-          <p>Credit</p>
-          <p class="transaction-category">CIH</p>
-        </div>
-        <div class="transaction-amount">
-          <p>236 $</p>
-          <p class="transaction-status">Success</p>
-        </div>
-      </div>
-      <div class="transaction">
-        <div class="transaction-info">
-          <div class="transaction-icon">
-            <img src="../../assets/icons/transaction (2).png" alt="">
-          </div>
-          <div class="transaction-details">
-            <h2>Payement For Service</h2>
-            <p>2024-03-23, 16:20</p>
-          </div>
-        </div>
-        <div class="transaction-type">
-          <p>Credit</p>
-          <p class="transaction-category">CIH</p>
-        </div>
-        <div class="transaction-amount">
-          <p>236 $</p>
-          <p class="transaction-status">Success</p>
-        </div>
-      </div>
-      <div class="transaction">
-        <div class="transaction-info">
-          <div class="transaction-icon">
-            <img src="../../assets/icons/transaction (2).png" alt="">
-          </div>
-          <div class="transaction-details">
-            <h2>Payement For Service</h2>
-            <p>2024-03-23, 16:20</p>
-          </div>
-        </div>
-        <div class="transaction-type">
-          <p>Credit</p>
-          <p class="transaction-category">CIH</p>
-        </div>
-        <div class="transaction-amount">
-          <p>236 $</p>
-          <p class="transaction-status">Success</p>
-        </div>
-      </div>
-      <div class="transaction">
-        <div class="transaction-info">
-          <div class="transaction-icon">
-            <img src="../../assets/icons/transaction (2).png" alt="">
-          </div>
-          <div class="transaction-details">
-            <h2>Payement For Service</h2>
-            <p>2024-03-23, 16:20</p>
-          </div>
-        </div>
-        <div class="transaction-type">
-          <p>Credit</p>
-          <p class="transaction-category">CIH</p>
-        </div>
-        <div class="transaction-amount">
-          <p>236 $</p>
-          <p class="transaction-status">Success</p>
-        </div>
-      </div>
+
+
+
+    
+      
+      
+      
+    
     </div>
 </div>
   
