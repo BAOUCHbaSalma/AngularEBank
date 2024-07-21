@@ -71,4 +71,8 @@ export class ServiceService {
 
   }
 
+  public findCompteById(idCompte:number){
+    return this.http.get(`${this.urlApi}/compte/${idCompte}`)
+  }
+
 }
