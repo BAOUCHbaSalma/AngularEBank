@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../Service/service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
 import { Beneficiaire } from '../Model/Model.models';
+import { subscribe } from 'diagnostics_channel';
+
 
 @Component({
   selector: 'app-updatebeneficiaire',
@@ -12,10 +14,15 @@ import { Beneficiaire } from '../Model/Model.models';
 export class UpdatebeneficiaireComponent implements OnInit{
   idBeneficiaire:any
   beneficiaireForm:any
+  CompteId:any
+  
 
-  constructor(private srv:ServiceService, private route:ActivatedRoute,private fb:FormBuilder){}
+
+  constructor(private srv:ServiceService, private route:ActivatedRoute,private fb:FormBuilder,private routes:Router){}
 
   ngOnInit(): void {
+    
+
     this.idBeneficiaire = this.route.snapshot.paramMap.get('idB')
     console.log(this.idBeneficiaire)
     this.initForm()
@@ -26,15 +33,15 @@ export class UpdatebeneficiaireComponent implements OnInit{
         nomBeneficiaire:res.nomBeneficiaire,
         banque:res.banque,
         numeroCompte:res.numeroCompte,
-        idCompte:res.compte.idCompte, 
-        
+        idCompte:res.compte.idCompte,
       })
+      this.CompteId=res.compte.idCompte
+      
 
     })
-
-
    
   }
+ 
   initForm(){
     this.beneficiaireForm=this.fb.group({
     
@@ -56,7 +63,7 @@ export class UpdatebeneficiaireComponent implements OnInit{
         banque:this.beneficiaireForm.value.banque,
         numeroCompte:this.beneficiaireForm.value.numeroCompte ,
         compte:{
-          idCompte: this.beneficiaireForm.value.idCompte,
+         idCompte: this.beneficiaireForm.value.idCompte,
           typeCompte: '',
           solde: 0,
           dateCreation: '',
@@ -75,6 +82,9 @@ export class UpdatebeneficiaireComponent implements OnInit{
       
     }
     this.srv.updateBeneficiaire(this.idBeneficiaire,inputData).subscribe()
+    }
+    close(){
+      this.routes.navigateByUrl(`dashboard/${this.CompteId}`)
     }
 
   }

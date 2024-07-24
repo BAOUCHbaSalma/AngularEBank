@@ -1,0 +1,46 @@
+<div class="container-wrapper">
+    <h1>Add Transaction</h1>
+    <form [formGroup]="transactionForm" (ngSubmit)="submitTransaction()">
+  
+      <div class="group">
+        <div class="form-group">
+            <label for="montant">Montant</label>
+            <input type="number" id="montant" class="form-control" formControlName="montant">
+          </div>
+      
+          <div class="form-group">
+            <label for="typeTransaction">Type de Transaction</label>
+            <input type="text" id="typeTransaction" class="form-control" formControlName="typeTransaction">
+          </div>
+      </div>
+  
+     <div class="group">
+        <div class="form-group">
+            <label for="descriptionTransaction">Description de la Transaction</label>
+            <textarea id="descriptionTransaction" class="form-control" formControlName="descriptionTransaction"></textarea>
+          </div>
+      
+          <div class="form-group">
+            <label for="banque">Banque</label>
+            <input type="text" id="banque" class="form-control" formControlName="banque">
+          </div>
+     </div>
+
+        <div class="form-group1">
+            <label for="beneficiaireId">ID Bénéficiaire</label>
+            <input type="number" id="beneficiaireId" class="form-control" formControlName="beneficiaireId">
+          </div>
+      
+       
+            <input type="hidden" id="compteId" class="form-control" formControlName="compteId">
+          
+            <div class="form-group1">
+          <button type="submit" class="btn1">Ajouter Transaction</button>
+            </div>
+    </form>
+
+    <div class="close">
+        <a href="dashboard/{{compteId}}">Close</a>
+    </div>
+</div>
+

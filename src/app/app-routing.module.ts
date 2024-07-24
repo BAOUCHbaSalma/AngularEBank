@@ -9,16 +9,18 @@ import { CarteBancaireComponent } from './carte-bancaire/carte-bancaire.componen
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddTransactionComponent } from './add-transaction/add-transaction.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
    {path:"home/:id",component:TableComponent},
    {path:"dashboard/:id",component:DashboardComponent},
   // {path:"beneficiaires/:idB",component:TableBenefciaireComponent},
-  // {path:"beneficiaire/:idB",component:UpdatebeneficiaireComponent},
-  // {path:"beneficiaire",component:AddBeneficiaireComponent},
+  {path:"beneficiaire/:idB",component:UpdatebeneficiaireComponent},
+  {path:"beneficiaire",component:AddBeneficiaireComponent},
   // {path:"cartes/:idC",component:CarteBancaireComponent},
  // {path:"login",component:LoginComponent},
+ {path:"transaction/:id",component:AddTransactionComponent},
 
 ];
 @NgModule({

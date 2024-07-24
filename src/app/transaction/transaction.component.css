@@ -4,14 +4,17 @@
     background-color: #333;
     color: white;
     border-radius: 10px;
-    overflow-y: auto;
-    max-height: 200px;
   }
   
   .transaction-container h1 {
     font-size: 24px;
     margin-bottom: 20px;
   }
+  .tran-warpper{
+    height: 200px;
+    overflow-y: auto;
+  }
+  
   .transaction {
     display: flex;
     justify-content: space-between;

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Beneficiaire, Compte, CompteRequest, User } from '../Model/Model.models';
+import { Beneficiaire, Compte, CompteRequest, Transaction, User } from '../Model/Model.models';
 
 @Injectable({
   providedIn: 'root'
@@ -73,6 +73,10 @@ export class ServiceService {
 
   public findCompteById(idCompte:number){
     return this.http.get(`${this.urlApi}/compte/${idCompte}`)
+  }
+
+  public addTransaction(transaction:Transaction , idCompte:number){
+    return this.http.post(`${this.urlApi}/transaction/${idCompte}`,transaction)
   }
 
 }

@@ -1,19 +1,25 @@
-<form [formGroup]="beneficiaireForm" (ngSubmit)="updateBeneficiaire()">
+  <div class="container-wrapper">
+    <h1>Update Beneficier</h1>
+    <form [formGroup]="beneficiaireForm" (ngSubmit)="updateBeneficiaire()">
    
-    <input id="idBeneficiaire" formControlName="idBeneficiaire" type="hidden">
+      <input id="idBeneficiaire" formControlName="idBeneficiaire" type="hidden">
+    
+      <label for="nomBeneficiaire">Nom Beneficiaire:</label>
+      <input id="nomBeneficiaire" formControlName="nomBeneficiaire" type="text">
+    
+      <label for="numeroCompte">numeroCompte:</label>
+      <input id="numeroCompte" formControlName="numeroCompte" type="number">
+    
+      <label for="banque">genre:</label>
+      <input id="banque" formControlName="banque" type="text">
   
-    <label for="nomBeneficiaire">Nom Beneficiaire:</label>
-    <input id="nomBeneficiaire" formControlName="nomBeneficiaire" type="text">
-  
-    <label for="numeroCompte">numeroCompte:</label>
-    <input id="numeroCompte" formControlName="numeroCompte" type="number">
-  
-    <label for="banque">genre:</label>
-    <input id="banque" formControlName="banque" type="text">
+      <label for="idCompte">idCompte:</label>
+      <input id="idCompte" formControlName="idCompte" type="number">
+    
+      <button  type="submit">update</button>
+    </form>
 
-    <label for="idCompte">idCompte:</label>
-    <input id="idCompte" formControlName="idCompte" type="number">
-  
-    <button  type="submit">update</button>
-  </form>
-  
+    <div class="close">
+      <button type="button" (click)="close()">Close</button>
+  </div>
+  </div>

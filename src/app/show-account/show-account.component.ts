@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../Service/service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-show-account',
@@ -11,7 +11,7 @@ export class ShowAccountComponent implements OnInit{
   idCompte:any
   compte:any
 
-  constructor(private srv:ServiceService,private route:ActivatedRoute){}
+  constructor(private srv:ServiceService,private route:ActivatedRoute,private routes:Router){}
   ngOnInit(): void {
    this.idCompte=this.route.snapshot.paramMap.get('id')
     this.srv.findCompteById(this.idCompte).subscribe(value=>{
@@ -19,6 +19,14 @@ export class ShowAccountComponent implements OnInit{
     
 
     })
+  }
+  updateStatus(idCompte:number,status:string){
+    this.srv.changeStatusCompte(idCompte,status).subscribe(()=>{
+      this.routes.navigateByUrl(`/home/${this.compte.user.userId}`)
+    }
+     
+    )
+    
   }
 
 }

@@ -1,4 +1,4 @@
-<table>
+<!-- <table>
     <thead>
     <tr>
       <th>idBeneficiaire</th>
@@ -9,7 +9,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let beneficiaire of listBeneficiaire">
+    <tr >
       <td>{{beneficiaire.idBeneficiaire}}</td>
       <td>{{beneficiaire.nomBeneficiaire}}</td>
       <td>{{beneficiaire.banque}}</td>
@@ -24,7 +24,22 @@
     </tr>
 
     </tbody>
-  </table>
+  </table> -->
 
+  <div class="beneficier">
+    <div class="beneficier-info" *ngFor="let beneficiaire of listBeneficiaire">
+      <div class="img-beneficier">
+        <img src="../../assets/images/compte.png" alt="">
+      </div>
+      <div class="info">
+        <h2>{{beneficiaire.nomBeneficiaire}}</h2>
+        <h3>{{beneficiaire.numeroCompte}}</h3>
+      </div>
+      <div class="btns">
+        <button id="delete" (click)="deleteBeneficiaire(beneficiaire.idBeneficiaire)">Delete</button>
+        <button><a routerLink="/beneficiaire/{{beneficiaire.idBeneficiaire}}">pdate</a></button>
+      </div>
+    </div>
+  </div>
 
 

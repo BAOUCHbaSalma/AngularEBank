@@ -1,41 +1,56 @@
 <div class="dashboard">
     <div class="menu">
-
+        <div class="img-logo">
+            <img src="../../assets/images/Grey and Orange Credit Card Security Finance Logo.png" alt="">
+        </div>
     </div>
     <div class="hero">
-        <div class="nav">
-            <div class="profile">
-                <div class="imgProfile">
-                    <img src="" alt="">
-                </div>
-                <h2>Salma Baouch</h2>
-            </div>    
-            <div class="btns">
-                <button class="addcard"><span>+ </span> Add Card</button>
-            </div>
-
+      <div class="nav">
+        <div class="profile">
+          <div class="imgProfile">
+            <img src="" alt="">
+          </div>
+          <h2>{{username}}</h2>
         </div>
-        <div class="hero-main">
-            <div class="hero-main-left">
-                <div class="account">
-                    <div class="header-account">
-                        <h1>ACCOUNT INFO</h1>
-                    </div>
-                    <app-show-account></app-show-account>
-                </div>
-                <div class="transaction">
-                    <div class="transaction-header">
-                        <h1>TRANSACTION</h1>
-                        <button>add transaction</button>
-                    </div>
-                        <app-transaction></app-transaction>
-                </div>
+        <!-- <div class="btns">
+          <button class="addcard"><span>+ </span> Add Card</button>
+        </div> -->
+      </div>
+      <div class="hero-main">
+        <div class="hero-main-left">
+          <div class="account">
+            <div class="header-account">
+              <h1>ACCOUNT INFO</h1>
             </div>
-            <div class="hero-main-right">
-                <div class="cardB">
-                    <app-carte-bancaire></app-carte-bancaire>
-                </div>
+            <app-show-account></app-show-account>
+          </div>
+          <div class="transaction">
+            <div class="transaction-header">
+              <h1>TRANSACTION</h1>
+              <button><a href="transaction/{{idCompte}}">add transaction</a></button>
             </div>
+            <app-transaction></app-transaction>
+          </div>
         </div>
+        <div class="hero-main-right">
+          <div class="cardB">
+            <app-carte-bancaire></app-carte-bancaire>
+          </div>
+          <div class="beneficier">
+            <div class="transaction-header">
+              <h1>Beneficiers</h1>
+              <button (click)="onOpen()">add Beneficier</button>
+            </div>
+            <app-table-beneficiaire></app-table-beneficiaire>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  
+  <section #addBeneficier class="addBeneficier">
+    <button (click)="onClose()">close</button>
+    <div class="formulare">
+      <app-add-beneficiaire></app-add-beneficiaire>
+    </div>
+  </section>

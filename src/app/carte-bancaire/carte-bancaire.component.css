@@ -62,3 +62,22 @@ h5.name {
   justify-content: space-between;
   align-items: flex-end;
 }
+.btns{
+    position: absolute;
+    bottom: -50px;
+}
+.btns > button{
+    padding: 5px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .4s;
+    border-radius: 12px;
+    margin: 0 3px;
+}
+.btns > button:hover{
+    background: white;
+    color: black;
+}

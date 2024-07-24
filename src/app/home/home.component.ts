@@ -8,7 +8,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 export class HomeComponent {
   @ViewChild('loginSection', { static: false })
   loginSection!: ElementRef;
-  check: boolean = true;
+  check: boolean = false;
 
   onOpen() {
     if (this.check) {
@@ -25,5 +25,10 @@ export class HomeComponent {
       this.loginSection.nativeElement.style.display = "none";
     }
     this.check = !this.check;
+  }
+  check1: boolean = false;
+
+  onOpenOrCloseSignup(check1: boolean) {
+    this.check1 = check1;
   }
 }

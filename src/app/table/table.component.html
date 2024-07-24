@@ -1,38 +1,4 @@
-<!-- 
-    <table>
-      <thead>
-      <tr>
-        <th>idCompte</th>
-        <th>typeCompte</th>
-        <th>solde</th>
-        <th>dateCreation</th>
-        <th>status</th>
-        <th>numeroCompte</th>
-        <th>raisonFermeture</th>
-        <th>idUsser</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let compte of listComptes">
-        <td>{{compte.idCompte}}</td>
-        <td>{{compte.typeCompte}}</td>
-        <td>{{compte.solde}}</td>
-        <td>{{compte.dateCreation}}</td>
-        <td>{{compte.status}}</td>
-        <td>{{compte.numeroCompte}}</td>
-        <td>{{compte.raisonFermeture}}</td>
-        <td>{{compte.user.userId}}</td>
-        <td> 
-          <button type="button" (click)="updateStatus(compte.idCompte, 'Fermer')">Fermer</button>
-          <a routerLink="/cartes/{{compte.idCompte}}">Show Cartes</a></td>
-    
-      </tr>
 
-      </tbody>
-    </table>
-
-
- -->
  <div class="home">
   <div class="header container">
       <div class="img">

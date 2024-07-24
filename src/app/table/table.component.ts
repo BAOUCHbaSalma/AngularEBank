@@ -24,13 +24,6 @@ export class TableComponent implements OnInit{
     })
   }
  
-  updateStatus(idCompte:number,status:string){
-    this.srv.changeStatusCompte(idCompte,status).subscribe(()=>{
-      this.ngOnInit();
-    }
-     
-    )
-    
-  }
+
 
 }

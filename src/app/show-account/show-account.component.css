@@ -4,14 +4,15 @@
     background-color: #333;
     color: white;
     border-radius: 10px;
+    position: relative;
 }
 .info{
     padding: 0 20px;
 }
 .info > p{
     color: white;
-    font-weight: 800;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,11 +20,30 @@
 .info > p > span{
     text-align: left;
     justify-content: start;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.active {
+.positive {
     color: green;
   }
   
-.desactive {
+  .negative {
     color: red;
+  }
+
+  #Daccounte{
+    position: absolute;
+    top: -60px;
+    right: 0;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 6px 10px;
+    background: transparent;
+    color: white;
+    transition: .4s;
+    font-size: 14px;
+  }
+  #Daccounte:hover{
+    background: white;
+    color: #333;
   }

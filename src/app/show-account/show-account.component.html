@@ -1,9 +1,12 @@
 <div class="account">
+    <button type="button"  (click)="updateStatus(compte.idCompte, 'Fermer')"  id="Daccounte">Fermer</button>
     <div class="info">
         <p>Account Number: <span>{{compte?.numeroCompte}}</span> </p>
         <p>Account Type: <span>{{compte?.typeCompte}}</span> </p>
         <p>Creation: <span>{{compte?.dateCreation}}</span> </p>
-        <p>Solde: <span>{{compte?.solde}}</span> </p>
+        <p>Solde: <span [ngClass]="{'positive': compte?.solde >= 0, 'negative': compte?.solde < 0}">
+            {{ compte?.solde }}
+          </span></p>          
         <p>Status :<span> {{compte?.status}}</span></p>
     </div>
 </div>

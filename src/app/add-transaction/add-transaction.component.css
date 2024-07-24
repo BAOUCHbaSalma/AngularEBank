@@ -18,34 +18,53 @@ form{
     border-radius: 15px;
     padding: 20px;
     margin: 20px auto;
-    display: flex;
-    flex-direction: column;
 }
-form > label{
-    font-size: 17px;
+.form-group{
+    padding: 20px;
+    width: 49%;
+}
+.form-group > label{
     color: white;
+    font-size: 17px;
     font-weight: 700;
-    padding: 5px 0;
 }
-form > input{
-    padding: 15px 10px ;
-    width: 100%;
-    border-radius: 12px ;
+.form-group > input{
+    padding: 15px 10px;
+    border-radius: 12px;
     border: none;
-    background: white;
-    color: balck;
 }
-form > button{
+.group{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-group1{
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+.form-group1 > label{
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+}
+.form-group1 > input{
+    padding: 15px 10px;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+}
+.btn1{
     padding: 10px 14px ;
     color: white;
     border: 2px solid white;
     border-radius: 12px;
     background: transparent;
     transition: .4s;
-    margin: 10px auto;
-
+    margin: 0 auto;
 }
-form > button:hover{
+.btn1:hover{
     background: white;
     color: black;
 }
@@ -54,7 +73,7 @@ form > button:hover{
     top: 50px;
     right: 250px;
 }
-.close > button{
+.close > a{
     padding: 10px 14px ;
     color: white;
     border: 2px solid white;
@@ -64,7 +83,7 @@ form > button:hover{
     margin: 0 auto;
     text-decoration: none;
 }
-.close button:hover{
+.close > a:hover{
     background: white;
     color: black;
 }

@@ -1,0 +1,32 @@
+form{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+label{
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    padding: 10px 0;
+}
+input{
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background: white;
+    width: 100%;
+}
+form > button{
+    color: white;
+    padding: 10px 15px;
+    font-weight: 700;
+    border: 2px solid white;
+    background: transparent;
+    transition: .5s;
+    border-radius: 12px;
+    margin: 8px 10px;
+}
+form > button:hover{
+    color: black;
+    background: white;
+}

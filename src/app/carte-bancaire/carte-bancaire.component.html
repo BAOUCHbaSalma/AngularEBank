@@ -31,7 +31,7 @@
 
 
 
-  <div class="container" *ngFor="let carte of listCartes">
+  <div class="container" id="container" *ngFor="let carte of listCartes">
     <header>
       <span class="logo">
         <img src="../../assets/images/logoo.png" alt="Logo" />
@@ -44,10 +44,16 @@
         <h6>Card Number</h6>
         <h5 class="number">{{ getFormattedCardNumber(carte) }}</h5>
         <h5 class="name">{{ carte.typeCarte }}</h5>
+        <h5>Status: <span>{{carte.status}}</span></h5>
       </div>
       <div class="valid-date">
         <h6>Valid Thru</h6>
         <h5>{{ getFormattedExpirationDate(carte) }}</h5>
       </div>
+    </div>
+    <div class="btns">
+      <button type="button" (click)="updateStatus(carte.idCarte, 'active')">Activer</button>
+      <button type="button" (click)="updateStatus(carte.idCarte, 'inactive')">Désactiver</button>
+      <button type="button" (click)="updateStatus(carte.idCarte, 'blocked')">Bloquer</button>
     </div>
   </div>

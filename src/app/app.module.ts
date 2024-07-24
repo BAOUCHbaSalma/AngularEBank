@@ -17,6 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ShowAccountComponent } from './show-account/show-account.component';
 import { TransactionComponent } from './transaction/transaction.component';
+import { AddTransactionComponent } from './add-transaction/add-transaction.component';
+
 
 
 
@@ -35,6 +37,7 @@ import { TransactionComponent } from './transaction/transaction.component';
     DashboardComponent,
     ShowAccountComponent,
     TransactionComponent,
+    AddTransactionComponent,
     
   ],
   imports: [

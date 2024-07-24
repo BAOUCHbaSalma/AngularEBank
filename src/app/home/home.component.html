@@ -5,7 +5,7 @@
       </div>
       <div class="btns">
         <button class="btn btn-primary" (click)="onOpen()">Login</button>
-        <button class="btn btn-secondary">Signup</button>
+        <button class="btn btn-secondary" (click)="onOpenOrCloseSignup(true)">Signup</button>
       </div>
     </div>
     <div class="hero">
@@ -31,5 +31,10 @@
   <section #loginSection class="login-section">
     <button (click)="onClose()">close</button>
     <app-login></app-login>
+  </section>
+
+  <section class="popup-signup" [ngStyle]="{'display': check1 ? 'flex' : 'none'}">
+    <button (click)="onOpenOrCloseSignup(false)">Close</button>
+            <app-formulaire></app-formulaire>
   </section>
   
